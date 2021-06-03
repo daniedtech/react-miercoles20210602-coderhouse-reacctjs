@@ -9,7 +9,7 @@ const Component = () => {
 
   const sumarContador = function(cont) {
     setCont(cont + 1);
-    return setFecha(new Date().toString());
+    setFecha(new Date().toString());
   };
 
   return (
