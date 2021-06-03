@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './style.css';
 
 // Usando hooks, vamos a declarar un contador, y por medio de un boton y un evento de click, vamos a ir mostrando por pantalla la cntidad de clicks que hemos hecho y adicionalmente vamos a mostrar la fecha.
@@ -11,6 +11,10 @@ const Component = () => {
     setCont(cont + 1);
     setFecha(new Date().toString());
   };
+
+  useEffect(() => {
+    console.info('contador: ' + cont);
+  }, [cont]);
 
   return (
     <div>
